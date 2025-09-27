@@ -1,0 +1,27 @@
+package com.maverick.nimbus.config
+
+import io.swagger.v3.oas.models.OpenAPI
+import io.swagger.v3.oas.models.info.Info
+import io.swagger.v3.oas.models.info.Contact
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
+
+@Configuration
+class OpenApiConfig {
+    
+    @Bean
+    fun customOpenAPI(): OpenAPI {
+        return OpenAPI()
+            .info(
+                Info()
+                    .title("User Management API")
+                    .version("1.0.0")
+                    .description("A simple Spring Boot REST API for user management")
+                    .contact(
+                        Contact()
+                            .name("Your Name")
+                            .email("your.email@example.com")
+                    )
+            )
+    }
+}

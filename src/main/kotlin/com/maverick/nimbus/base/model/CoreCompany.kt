@@ -1,9 +1,11 @@
 package com.maverick.nimbus
 
+import io.swagger.v3.oas.annotations.media.Schema
 import jakarta.persistence.*
 
 @Entity
 @Table(name = "core_company")
+@Schema(description = "Company Entity")
 class CoreCompany {
 
     @Id
