@@ -1,0 +1,5 @@
+export default {
+  toNumberDecimalString: (value: any) => {
+    return `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  },
+};

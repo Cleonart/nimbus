@@ -38,3 +38,29 @@ out/
 
 ### Kotlin ###
 .kotlin
+
+### Frontend ###
+
+/static/.output
+/static/.data
+/static/.nuxt
+/static/.nitro
+/static/.cache
+/static/dist
+
+# Node dependencies
+/static/node_modules
+
+# Logs
+/static/logs
+/static/*.log
+
+# Misc
+/static/.DS_Store
+/static/.fleet
+/static/.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
