@@ -14,7 +14,7 @@ class SecurityConfig {
     fun securityFilterChain(http: HttpSecurity): SecurityFilterChain {
         return http.authorizeHttpRequests {
             requests -> requests
-                .requestMatchers("/kotlin", "sales").permitAll()
+                .requestMatchers("/kotlin", "sales", "/api/v1/modules/{id}").permitAll()
                 .anyRequest().authenticated()
         }.build()
     }
