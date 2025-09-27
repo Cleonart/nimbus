@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PatchMapping
 import org.springframework.web.bind.annotation.RestController
 import org.slf4j.LoggerFactory
 
+import com.maverick.nimbus.CoreModules
+
 @RestController
 @RequestMapping("/api/v1/modules")
 class CoreModulesController {
@@ -15,7 +17,7 @@ class CoreModulesController {
     private val logger = LoggerFactory.getLogger(CoreModulesController::class.java)
 
     @GetMapping
-    fun getListOfModules(): Map<String, String> {
+    fun getList(): Map<String, String> {
         logger.info("GET /hello endpoint was called")
         logger.debug("Some debug details here")
         logger.error("Example error log")

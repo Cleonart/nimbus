@@ -4,11 +4,24 @@ import jakarta.persistence.*
 
 @Entity
 @Table(name = "core_modules")
-data class CoreModules(
+class CoreModules {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
+    var id: Long = 0
 
     @Column(nullable = false, length = 255)
-    val name: String = ""
-)
+    var code: String = ""
+
+    @Column(nullable = false, length = 255)
+    var name: String = ""
+
+    // no-arg constructor (required by JPA)
+    constructor()
+
+    // constructor with parameters
+    constructor(code: String, name: String) {
+        this.code = code
+        this.name = name
+    }
+}
