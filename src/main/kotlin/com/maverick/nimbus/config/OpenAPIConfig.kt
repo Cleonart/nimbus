@@ -14,13 +14,13 @@ class OpenApiConfig {
         return OpenAPI()
             .info(
                 Info()
-                    .title("User Management API")
+                    .title("Maverick Nimbus Project API")
                     .version("1.0.0")
-                    .description("A simple Spring Boot REST API for user management")
+                    .description("A comprehensive REST API for NIMBUS ERP to handle most of the task")
                     .contact(
                         Contact()
-                            .name("Your Name")
-                            .email("your.email@example.com")
+                            .name("Azarya")
+                            .email("azarya@gmail.com")
                     )
             )
     }
