@@ -31,13 +31,15 @@ class CoreCompanyController {
     private val logger = LoggerFactory.getLogger(CoreCompanyController::class.java)
 
     @GetMapping
-    @Operation(summary = "Get all users", description = "Retrieve a list of all users")
-    @ApiResponse(responseCode = "200", description = "Successfully retrieved users")
+    @Operation(summary = "Get all company", description = "Function to retrieve all company")
+    @ApiResponse(responseCode = "200", description = "Request success")
     fun getAllCompany(): List<CoreCompany> {
         return coreCompanyRepository.findAll()
     }
 
     @GetMapping("/{id}")
+    @Operation(summary = "Get specific company", description = "Get specific company data")
+    @ApiResponse(responseCode = "200", description = "Request success")
     fun getBySpecificCompany(
         @PathVariable id: Long
     ): ResponseEntity<CoreCompany> {
@@ -50,6 +52,8 @@ class CoreCompanyController {
     }
 
     @PostMapping
+    @Operation(summary = "Create new company", description = "API endpoint to create new company")
+    @ApiResponse(responseCode = "200", description = "Request success")
     fun createCompany(@RequestBody company: CoreCompany): CoreCompany {
         return coreCompanyRepository.save(company)
     }
