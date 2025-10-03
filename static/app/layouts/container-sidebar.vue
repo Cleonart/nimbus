@@ -215,7 +215,7 @@ const handleLogout = () => {
             >
               SI
             </div>
-            <span class="font-semibold text-lg">SILICON</span>
+            <span class="font-semibold text-lg">NIMBUS</span>
           </div>
 
           <!-- Apps Grid Button -->

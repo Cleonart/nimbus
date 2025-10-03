@@ -22,7 +22,7 @@
                   />
                 </svg>
               </div>
-              <span class="text-xl font-semibold">Silicon</span>
+              <span class="text-xl font-semibold">Nimbus</span>
             </div>
           </div>
 
