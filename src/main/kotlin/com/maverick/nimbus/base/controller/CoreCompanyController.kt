@@ -1,6 +1,7 @@
 package com.maverick.nimbus
 
 import com.maverick.nimbus.repository.CoreCompanyRepository
+import com.maverick.nimbus.service.CoreCompanyService
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import io.swagger.v3.oas.annotations.tags.Tag
@@ -16,7 +17,9 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/api/v1/company")
 @Tag(name = "Company Management", description = "APIs for managing company")
-class CoreCompanyController {
+class CoreCompanyController(
+    private val service: CoreCompanyService
+) {
 
     @Autowired private lateinit var coreCompanyRepository: CoreCompanyRepository
 
@@ -26,7 +29,7 @@ class CoreCompanyController {
     @Operation(summary = "Get all company", description = "Function to retrieve all company")
     @ApiResponse(responseCode = "200", description = "Request success")
     fun getAllCompany(): List<CoreCompany> {
-        return coreCompanyRepository.findAll()
+        return service.getAllCompanies()
     }
 
     @GetMapping("/{id}")
